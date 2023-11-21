@@ -2,7 +2,7 @@
 session_start();
 
 if(!isset($_SESSION['id'])){
-    header("location:./pages/index.php");
+    header("location:../index.php");
 }
 ?>
 
@@ -45,7 +45,7 @@ if(!isset($_SESSION['id'])){
     </form>
 
         <div class="input-group mb-3">
-            <a href="./pages/annonce.php"><button class="btn btn-outline-secondary"  name="revenir">Revenir à la page d'acceuil</button></a>
+            <a href="annonce.php"><button class="btn btn-outline-secondary"  name="revenir">Revenir à la page d'acceuil</button></a>
         </div>
 
 </div>
