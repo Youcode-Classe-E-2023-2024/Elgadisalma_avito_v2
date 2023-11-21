@@ -1,5 +1,5 @@
 <?php
-require_once 'config.php';
+require_once '../config.php';
 $nom_err='';
 
 $nom_utilisateur = $_POST['userName'];
