@@ -2,7 +2,7 @@
 session_start();
 
 if(!isset($_SESSION['id'])){
-    header("location:./pages/index.php");
+    header("location:../index.php");
 }
 ?>
 
@@ -20,14 +20,14 @@ if(!isset($_SESSION['id'])){
 <body>
 <div class="container mt-5">
     
-    <h2>Liste d'annonce'</h2>
-    <a href="./pages/mes_annonces.php"><button type="button" class="btn btn-primary">Mes annonces</button></a>
+    <h2>Liste d'annonce</h2>
+    <a href="mes_annonces.php"><button type="button" class="btn btn-primary">Mes annonces</button></a>
     <br>
     <form action="../include/log_out.php" method="post">
     <button type="submit" class="btn btn-danger">Log out</button>
     </form>
     <br>
-    <a href="./pages/ajout_annonce.php"><button>Ajouter une annonce</button></a>
+    <a href="ajout_annonce.php"><button>Ajouter une annonce</button></a>
 
     <table class="table mt-3">
         <thead>
