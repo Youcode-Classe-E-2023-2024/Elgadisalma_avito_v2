@@ -1,5 +1,5 @@
 <?php
-require_once './include/config.php';
+require_once '../config.php';
 
 if (isset($_POST['submit'])) {
     $id = $_POST['id'];
