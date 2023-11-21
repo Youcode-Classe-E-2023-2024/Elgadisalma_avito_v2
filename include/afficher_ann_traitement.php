@@ -1,6 +1,6 @@
 <?php
 function get_annonce() {
-    require_once './include/config.php';
+    require_once '../config.php';
         $annonce = [];
     
     
