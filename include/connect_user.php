@@ -1,6 +1,6 @@
 <?php
 
-require_once './include/config.php';
+require_once '../config.php';
 
 $nom_utilisateur = $_POST['userName'];
 $password = $_POST['password'];
@@ -20,7 +20,7 @@ if ($result_check_user->num_rows > 0) {
         $_SESSION['nom_utilisateur'] = $user['nom_utilisateur'];
         $_SESSION['numero_tel'] = $user['numero_tel'];
 
-        header("Location: ../pages/annonce.php?STATUS=connected avec succes");
+        header("Location: ../pages/annonce.php");
         exit();
     } else {
         header("Location: ../pages/index.php?STATUS=probleme de connexion");
