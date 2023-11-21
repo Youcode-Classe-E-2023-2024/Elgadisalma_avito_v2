@@ -2,7 +2,7 @@
 session_start();
 
 if(!isset($_SESSION['id'])){
-    header("location:./pages/index.php");
+    header("location:../index.php");
 }
 ?>
 
@@ -23,9 +23,9 @@ if(!isset($_SESSION['id'])){
     <button type="submit" class="btn btn-danger">Log out</button>
     </form>
     <br>
-    <a href="./pages/ajout_annonce.php"><button>Ajouter une annonce</button></a>
+    <a href="ajout_annonce.php"><button>Ajouter une annonce</button></a>
     <br>
-    <a href="./pages/annonce.php"><button type="button" class="btn btn-primary">Voir les annonces</button></a>
+    <a href="annonce.php"><button type="button" class="btn btn-primary">Voir les annonces</button></a>
 
 
     <table class="table mt-3">
@@ -53,7 +53,7 @@ if(!isset($_SESSION['id'])){
                 <td><?php echo $annonce['etat_annonce'] ;?> </td>
                 <td><?php echo $annonce['description_annonce'] ;?> </td>
                 <td>
-                <a href="./pages/edit.php?id=<?php echo $annonce['id']; ?>">
+                <a href="edit.php?id=<?php echo $annonce['id']; ?>">
     <button class="btn btn-warning btn-sm">
         <i class="fas fa-edit"></i> Modifier
     </button>
