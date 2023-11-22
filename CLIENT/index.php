@@ -7,12 +7,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <style>
         body {
-            /* background-color: #88555C;  */
             color: #000; 
             background-image: url("./pic/network-concept-with-thread.jpg");
         }
         .container {
             margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .input-group-text {
             background-color: #FF80AB; 
@@ -22,12 +24,20 @@
             background-color: #FF80AB; 
             color: #000000;
         }
+        
+        .form-control {
+            width: 200px;
+        }
+        
+        .btn {
+            width: 69em; 
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Bienvenue à Avito</h1>
-        <h5>Connectez-vous pour béneficier d'offres exclusives</h5>
+        <h5>Connectez-vous pour bénéficier d'offres exclusives</h5>
         <form action="./include/connect_user.php" method="post">
             <div class="input-group flex-nowrap">
                 <span class="input-group-text" id="addon-wrapping">+</span>
@@ -41,7 +51,7 @@
             <br>
             
             <div class="d-grid gap-2">
-                <button type="submit" class="btn btn-danger ">Connexion</button>
+                <button type="submit" class="btn btn-danger">Connexion</button>
             </div>
         </form>
         <br>
