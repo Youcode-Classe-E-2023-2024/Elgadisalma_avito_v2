@@ -6,15 +6,17 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <title>S'inscrire à Avito </title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <div class="login_container">
         <?php
          require_once 'navbar2.php';
         ?>
-
+        <div class="container">
     <h1>Bienvenue à Avito</h1>
+    <h6>Inscrivez-vous pour profiter d'offres exclusives</h6>
     <form action="../include/Add_user.php" method="post">
 
       <div class="input-group flex-nowrap">
@@ -24,8 +26,6 @@
     </div>
     <br>
       
-    </div>
-      </div>
 
       <div class="input-group flex-nowrap">
         <span class="input-group-text" id="addon-wrapping">+</span>
@@ -38,14 +38,16 @@
       <input type="password" class="form-control" placeholder="Mot de passe" aria-describedby="addon-wrapping" name='password'>
   </div>
   <br>
-
+  <div class="botonaaata">
   <div class="d-grid gap-2">
     <button type="submit" class="btn btn-danger">S'inscrire</button>
-</div
+  </div>
+</div>
   
     </form>
     
-
+  </div>
+</div>
 </body>
 
 </html>
