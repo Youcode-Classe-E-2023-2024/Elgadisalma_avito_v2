@@ -35,6 +35,16 @@ $requete_creation_table_utilisateur = "
 ";
 
 
+// $requete_modification_table_utilisateur = "
+// ALTER TABLE utilisateur
+// ADD COLUMN role ENUM('admin', 'client') NOT NULL DEFAULT 'client'
+// ";
 
+
+// if (mysqli_query($link, $requete_modification_table_utilisateur)) {
+//     echo "La colonne 'role' a été ajoutée avec succès à la table 'utilisateur'.";
+// } else {
+//     echo "Erreur lors de l'exécution de la requête : " . mysqli_error($link);
+// }
 
 ?>
