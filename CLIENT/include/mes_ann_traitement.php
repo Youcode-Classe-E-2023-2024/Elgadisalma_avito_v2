@@ -3,7 +3,7 @@
 
 function get_mes_annonces() {
 
-    require_once '../config.php';
+    require_once 'config.php';
     $nom_utilisateur = isset($_SESSION['nom_utilisateur']) ? $_SESSION['nom_utilisateur'] : '';
 
     $sql = "SELECT * FROM annonce WHERE nom_utilisateur = ?";
