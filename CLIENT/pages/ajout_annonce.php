@@ -2,7 +2,7 @@
 session_start();
 
 if(!isset($_SESSION['id'])){
-    header("location:../index.php");
+    header("location:./connexion.php");
 }
 ?>
 
@@ -17,6 +17,8 @@ if(!isset($_SESSION['id'])){
 </head>
 
 <body>
+<?php
+require_once 'navbar.php';?>
 <div class="container mt-5">
     <h2>ajouter une annonce</h2>
     
@@ -43,10 +45,6 @@ if(!isset($_SESSION['id'])){
         </div>
 
     </form>
-
-        <div class="input-group mb-3">
-            <a href="annonce.php"><button class="btn btn-outline-secondary"  name="revenir">Revenir à la page d'acceuil</button></a>
-        </div>
 
 </div>
 
