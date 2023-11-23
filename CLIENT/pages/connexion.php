@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <style>
-        body {
+    <link rel="stylesheet" href="style.css">
+    <!-- <style>
+        /* body {
             color: #000; 
             background-image: url("../../pic/network-concept-with-thread.jpg");
         }
@@ -31,10 +32,15 @@
         
         .btn {
             width: 69em; 
-        }
-    </style>
+        } */
+    </style> -->
 </head>
 <body>
+    <div class="login_container">
+        <?php
+         require_once 'navbar2.php';
+        ?>
+
     <div class="container">
         <h1>Bienvenue à Avito</h1>
         <h5>Connectez-vous pour bénéficier d'offres exclusives</h5>
@@ -50,13 +56,16 @@
             </div>
             <br>
             
-            <div class="d-grid gap-2">
+            <div class="botonaaata">
                 <button type="submit" class="btn btn-danger">Connexion</button>
             </div>
         </form>
         <br>
-        <a href="inscription.php" class="btn btn-secondary">S'inscrire</a>
+        <div class="botonaaata"></div>
+        <a href="inscription.php" ><button class="btn btn-secondary">S'inscrire</button></a></div>
+        </div>
     </div>
+    
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
