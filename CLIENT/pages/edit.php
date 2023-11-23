@@ -1,9 +1,9 @@
 <?php
-include_once "../config.php";
+include_once "../include/config.php";
 session_start();
 
 if(!isset($_SESSION['id'])){
-    header("location:../index.php");
+    header("location:connexion.php");
 }
 $id = $_GET['id'];
 $sql = "SELECT * FROM annonce WHERE id =$id ;";
