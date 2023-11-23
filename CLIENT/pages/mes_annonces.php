@@ -2,7 +2,7 @@
 session_start();
 
 if(!isset($_SESSION['id'])){
-    header("location:../index.php");
+    header("location:./pages/connexion.php");
 }
 ?>
 
@@ -14,18 +14,17 @@ if(!isset($_SESSION['id'])){
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <title>Mes annonces</title>
+    
 </head>
 <body>
+
+ <?php
+require_once 'navbar.php';?>
+
 <div class="container mt-5">
+   
     
     <h2>Ma liste</h2>
-    <form action="../include/log_out.php" method="post">
-    <button type="submit" class="btn btn-danger">Log out</button>
-    </form>
-    <br>
-    <a href="ajout_annonce.php"><button>Ajouter une annonce</button></a>
-    <br>
-    <a href="annonce.php"><button type="button" class="btn btn-primary">Voir les annonces</button></a>
 
 
     <table class="table mt-3">
