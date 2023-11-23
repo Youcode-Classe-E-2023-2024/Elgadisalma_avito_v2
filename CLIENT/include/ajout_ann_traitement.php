@@ -1,10 +1,10 @@
 <?php
 
-require_once '../config.php';
+require_once 'config.php';
 session_start();
 
 if (!isset($_SESSION['id'])) {
-    header("location: ../pages/index.php");
+    header("location: ../pages/connexion.php");
     exit();
 }
 
@@ -22,7 +22,7 @@ if (isset($_POST['submit'])) {
 
 
     if ($link->query($sql_insert) === TRUE) {
-        header("location:../pages/annonce.php?task=added_successfully");
+        header("location:../pages/index.php?task=added_successfully");
         exit();
     } else {
         echo "Erreur: " . $link->error;
