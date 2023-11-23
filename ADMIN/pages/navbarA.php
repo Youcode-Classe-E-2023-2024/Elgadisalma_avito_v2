@@ -36,9 +36,9 @@
 
     <a href="indexA.php"><button type="button" class="btn btn-primary">Annonce</button></a>
     
-    <a href="#"><button type="button" class="btn btn-primary">Utilisateur</button></a>
+    <a href="utilisateur.php"><button type="button" class="btn btn-primary">Utilisateur</button></a>
     
-    <a href="../include/log_out.php"><button type="button" class="btn btn-danger">Log out</button></a>
+    <a href="../../CLIENT/include/log_out.php"><button type="button" class="btn btn-danger">Log out</button></a>
     
     
         </div>
