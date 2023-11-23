@@ -6,7 +6,8 @@
     <title>Document</title>
     <style>
         body{
-            background-image: url("../../pic/c2feMw.jpg");
+            /* background-image: url("../../pic/c2feMw.jpg"); */
+
         }
         header{
             background-color: rgb(0, 0, 0);
@@ -37,6 +38,8 @@
         
         <div class="bouttons">
     <a href="inscription.php"><button type="button" class="btn btn-primary">S'inscrire</button></a>
+
+    <a href="index.php"><button type="button" class="btn btn-primary">Home</button></a>
     
     <a href="connexion.php"><button type="button" class="btn btn-primary">Se connecter</button></a>
     
