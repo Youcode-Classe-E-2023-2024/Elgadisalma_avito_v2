@@ -1,5 +1,5 @@
 <?php
-require_once '../config.php';
+require_once 'config.php';
 $nom_err='';
 
 $nom_utilisateur = $_POST['userName'];
@@ -20,7 +20,7 @@ $sql_check_user = "SELECT id FROM utilisateur WHERE nom_utilisateur = '$nom_util
         $sql_insert = "INSERT INTO utilisateur (nom_utilisateur, numero_tel ,password) 
                         VALUES ('$nom_utilisateur', '$numero_tel','$password')";
         if ($link->query($sql_insert) === TRUE) {
-            header("location:../pages/index.php?profil=added_successfully");
+            header("location:../pages/connexion.php?profil=added_successfully");
             exit();
         } else {
             echo "Erreur: " . $link->error;
