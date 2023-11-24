@@ -21,7 +21,7 @@ if ($result_check_user->num_rows > 0) {
     $_SESSION['role'] = $user['role'];
 
     if ($user['role'] == 'admin') {
-        header("Location: ../pages/indexA.php");
+        header("Location: ../../ADMIN/pages/indexA.php");
     } else {
         header("Location: ../pages/index.php");
     }
