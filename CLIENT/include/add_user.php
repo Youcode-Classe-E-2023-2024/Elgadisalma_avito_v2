@@ -17,8 +17,11 @@ $sql_check_user = "SELECT id FROM utilisateur WHERE nom_utilisateur = '$nom_util
         header("location:../pages/inscription.php?STATUS=Nom d'utilisateur déjà existant");
         exit();
     } else {
+        // Hacher le mot de passe
+    $motDePasseHache = password_hash($password, PASSWORD_DEFAULT);
+
         $sql_insert = "INSERT INTO utilisateur (nom_utilisateur, numero_tel ,password) 
-                        VALUES ('$nom_utilisateur', '$numero_tel','$password')";
+                        VALUES ('$nom_utilisateur', '$numero_tel','$motDePasseHache')";
         if ($link->query($sql_insert) === TRUE) {
             header("location:../pages/connexion.php?profil=added_successfully");
             exit();
