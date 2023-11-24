@@ -4,7 +4,7 @@ function get_annonce() {
         $annonce = [];
     
     
-        $sql = "SELECT * FROM annonce  ;";
+        $sql = "SELECT * FROM annonce WHERE statut='refuse' ;";
         $result = $link->query($sql);
         if(mysqli_num_rows($result) > 0){
             while ($row = $result->fetch_assoc()) {
