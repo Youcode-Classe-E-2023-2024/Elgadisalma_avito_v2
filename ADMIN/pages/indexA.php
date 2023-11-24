@@ -47,7 +47,7 @@ session_start();
         <tbody id="taskTableBody">
         <?php
             include_once '../include/afficher_ann_A.php';
-            $annonces = get_annonce_refuse();
+            $annonces = get_annonces_par_statut($link, 'refuse');
             foreach ($annonces as $annonce) {
         ?>
             <tr>
@@ -95,8 +95,8 @@ session_start();
         <tbody id="taskTableBody">
         <?php
             include_once '../include/afficher_ann_A.php';
-            $annonces = get_annonce_approuve();
-            foreach ($annonces as $annonce) {
+            $annonces_approuve = get_annonces_par_statut($link, 'approuve');
+            foreach ($annonces_approuve as $annonce) {
         ?>
             <tr>
                 <td><?php echo $annonce['nom_utilisateur'] ;?></td>
