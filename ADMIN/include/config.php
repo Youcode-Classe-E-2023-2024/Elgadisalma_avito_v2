@@ -47,4 +47,16 @@ $requete_creation_table_utilisateur = "
 //     echo "Erreur lors de l'exécution de la requête : " . mysqli_error($link);
 // }
 
+// $requete_modification_table_annonce = "
+// ALTER TABLE annonce
+// ADD COLUMN statut ENUM('Approuve', 'refuse') NOT NULL DEFAULT 'refuse'
+// ";
+
+
+// if (mysqli_query($link, $requete_modification_table_annonce)) {
+//     echo "La colonne 'statut' a été ajoutée avec succès à la table 'annonce'.";
+// } else {
+//     echo "Erreur lors de l'exécution de la requête : " . mysqli_error($link);
+// }
+
 ?>
