@@ -22,7 +22,7 @@ session_start();
     
     require_once 'navbar.php';
     ?>
-
+    <h1>Bonjour <?php echo $_SESSION['nom_utilisateur']; ?></h1>
     <?php }else{ 
         require_once 'navbar2.php';
 
