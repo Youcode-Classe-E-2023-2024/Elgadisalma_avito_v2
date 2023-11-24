@@ -28,7 +28,7 @@ session_start();
 
    } ?>
 <div class="container mt-5">
-    
+    <h1>Bonjour <?php echo $_SESSION['nom_utilisateur']; ?></h1>
     <h2>Liste d'annonce</h2>
     
     <br>
@@ -47,7 +47,7 @@ session_start();
         
         <tbody id="taskTableBody">
         <?php
-            include_once '../../CLIENT/include/afficher_ann_traitement.php';
+            include_once '../include/afficher_ann_A.php';
             $annonces = get_annonce();
             foreach ($annonces as $annonce) {
         ?>
