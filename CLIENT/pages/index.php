@@ -41,15 +41,15 @@ session_start();
                 <th>Titre du produit</th>
                 <th>État</th>
                 <th>Description du produit</th>
-
+                <th>Actions</th>
             </tr>
         </thead>
         
         <tbody id="taskTableBody">
         <?php
-            include_once '../include/afficher_ann_traitement.php';
-            $annonces = get_annonce();
-            foreach ($annonces as $annonce) {
+            include_once '../../ADMIN/include/afficher_ann_A.php';
+            $annonces_approuve = get_annonces_par_statut($link, 'approuve');
+            foreach ($annonces_approuve as $annonce) {
         ?>
             <tr>
                 <td><?php echo $annonce['nom_utilisateur'] ;?></td>
@@ -57,7 +57,12 @@ session_start();
                 <td><?php echo $annonce['titre_annonce'] ;?> </td>
                 <td><?php echo $annonce['etat_annonce'] ;?> </td>
                 <td><?php echo $annonce['description_annonce'] ;?> </td>
-                
+                <td><form action="../include/deleteA.php" method="get" style="display: inline;">
+                    <input type="hidden" name="id" value="<?php echo $annonce['id']; ?>">
+                    <button type="submit" class="btn btn-danger btn-sm">
+                        <i class="fas fa-trash"></i> Supprimer
+                    </button>
+                </form>
             </td>
             </tr>
         <?php } ?>
