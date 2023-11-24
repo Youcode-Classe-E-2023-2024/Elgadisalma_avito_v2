@@ -59,4 +59,18 @@ $requete_creation_table_utilisateur = "
 //     echo "Erreur lors de l'exécution de la requête : " . mysqli_error($link);
 // }
 
+
+// $motDePasseHache = password_hash('1234', PASSWORD_DEFAULT);
+// $requete_ajout_utilisateur = "
+//     INSERT INTO utilisateur (nom_utilisateur, numero_tel, password, role)
+//     VALUES ('ELGADI', '123456789', '$motDePasseHache', 'admin')
+// ";
+
+// // Exécution de la requête
+// if (mysqli_query($link, $requete_ajout_utilisateur)) {
+//     echo "Utilisateur ajouté avec succès.";
+// } else {
+//     echo "Erreur lors de l'ajout de l'utilisateur : " . mysqli_error($link);
+// }
+
 ?>
