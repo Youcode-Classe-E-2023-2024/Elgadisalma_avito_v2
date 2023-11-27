@@ -47,4 +47,16 @@ $requete_creation_table_utilisateur = "
 //     echo "Erreur lors de l'exécution de la requête : " . mysqli_error($link);
 // }
 
+// $requete_modification_table_utilisateur = "
+// ALTER TABLE utilisateur
+// ADD COLUMN photo VARCHAR(255) DEFAULT 'utilsateur-anonyme.png';
+
+
+// ";
+
+// if (mysqli_query($link, $requete_modification_table_utilisateur)) {
+//     echo "La colonne 'photo' a été ajoutée avec succès à la table 'utilisateur'.";
+// } else {
+//     echo "Erreur lors de l'exécution de la requête : " . mysqli_error($link);
+// }
 ?>
