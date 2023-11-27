@@ -28,7 +28,7 @@ session_start();
             <div class="info">
                 <h5>Nom d'utilisateur :  <?php echo $_SESSION['nom_utilisateur']; ?></h5>
                 <h5>Numéro de téléphone :  <?php echo $_SESSION['numero_tel']; ?></h5>
-                <a href="edit.php?id=<?php echo $annonce['id']; ?>">
+                <a href="modi_info.php">
                     <button class="btn btn-warning btn-sm">
                         <i class="fas fa-edit"></i> Modifier mon compte   
                     </button>
