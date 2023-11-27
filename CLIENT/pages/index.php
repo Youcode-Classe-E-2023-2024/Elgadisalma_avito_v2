@@ -22,7 +22,9 @@ session_start();
     
     require_once 'navbar.php';
     ?>
+    <div class="container mt-5">
     <h1>Bonjour <?php echo $_SESSION['nom_utilisateur']; ?></h1>
+    </div>
     <?php }else{ 
         require_once 'navbar2.php';
 
