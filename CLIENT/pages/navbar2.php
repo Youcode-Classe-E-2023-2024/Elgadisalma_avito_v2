@@ -6,8 +6,7 @@
     <title>Document</title>
     <style>
         body{
-            /* background-image: url("../../pic/c2feMw.jpg"); */
-
+            background-image: url("../../pic/c2feMw.jpg");
         }
         header{
             background-color: rgb(0, 0, 0);
