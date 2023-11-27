@@ -5,7 +5,7 @@ session_start();
 $nom_utilisateur = $_POST['userName'];
 $password = $_POST['password'];
 
-$sql_check_user = "SELECT id, nom_utilisateur, role, password , photo FROM utilisateur WHERE nom_utilisateur = '$nom_utilisateur' ";
+$sql_check_user = "SELECT id, nom_utilisateur, role, password , photo, numero_tel FROM utilisateur WHERE nom_utilisateur = '$nom_utilisateur' ";
 $result_check_user = $link->query($sql_check_user);
 
 if (!$result_check_user) { 
@@ -19,6 +19,7 @@ if ($result_check_user->num_rows > 0) {
     if (password_verify($password, $user['password'])) {
         $_SESSION['id'] = $user['id'];
         $_SESSION['nom_utilisateur'] = $user['nom_utilisateur'];
+        $_SESSION['numero_tel'] = $user['numero_tel'];
         $_SESSION['role'] = $user['role'];
         $_SESSION['photo'] = $user['photo'];
 
