@@ -41,6 +41,8 @@
     <a href="mes_annonces.php"><button type="button" class="btn btn-primary">Mes annonces</button></a>
     
     <a href="./ajout_annonce.php"><button type="button" class="btn btn-primary">Ajouter une annonce</button></a>
+
+    <a href="profil.php"><button type="button" class="btn btn-primary">Mon profil</button></a>
     
     <form action="../include/log_out.php" method="post">
     <button type="submit" class="btn btn-danger">Log out</button>
