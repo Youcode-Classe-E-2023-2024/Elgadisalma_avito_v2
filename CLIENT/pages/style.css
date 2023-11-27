@@ -45,7 +45,10 @@
     justify-content: space-around;
     align-items: center;
     height: 60vh;
-    background-color: rgb(156, 142, 142);
+    /* background-color: rgb(156, 142, 142); */
+    background-image: url(../../pic/Vliestapete-Struktur-graubeige-Glanz-AS-Creation-3.jpg);
+    background-size: cover;
+  background-repeat: no-repeat;
     width: 100%;
 }
 .ph_profil{
