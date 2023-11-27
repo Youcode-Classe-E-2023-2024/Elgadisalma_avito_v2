@@ -1,11 +1,9 @@
 <?php
 session_start();
-
 ?>
 
-
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -21,7 +19,7 @@ session_start();
     require_once 'navbar.php';
     ?>
     <div class="profil">
-<h1>Bonjour <?php echo $_SESSION['nom_utilisateur']; ?></h1>
+        <h1>Bonjour <?php echo $_SESSION['nom_utilisateur']; ?></h1>
         <div class="container-profil">
             
             <div class="ph_profil">
@@ -29,12 +27,20 @@ session_start();
             </div>
             <div class="info">
                 <h5>Nom d'utilisateur :  <?php echo $_SESSION['nom_utilisateur']; ?></h5>
-                <h5>Numéro de télephone :  <?php echo $_SESSION['numero_tel']; ?></h5>
+                <h5>Numéro de téléphone :  <?php echo $_SESSION['numero_tel']; ?></h5>
+                <a href="edit.php?id=<?php echo $annonce['id']; ?>">
+                    <button class="btn btn-warning btn-sm">
+                        <i class="fas fa-edit"></i> Modifier mon compte   
+                    </button>
+                </a>
+                <form action="../include/delete_me.php" method="get" style="display: inline;">
+                    <input type="hidden" name="deleteUser" value="<?php echo $_SESSION['id']; ?>">
+                    <button type="submit" class="btn btn-danger btn-sm">
+                        <i class="fas fa-trash"></i> Supprimer mon compte
+                    </button>
+                </form>
+                        
             </div>
-
-            
-
-
         </div>
     </div>
     
