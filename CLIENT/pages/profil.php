@@ -1,7 +1,6 @@
 <?php
 session_start();
 
-
 ?>
 
 
@@ -13,6 +12,7 @@ session_start();
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <title>Avito</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
@@ -20,15 +20,24 @@ session_start();
     <?php 
     require_once 'navbar.php';
     ?>
-        <div class="container mt-5">
-            <h1>Bonjour <?php echo $_SESSION['nom_utilisateur']; ?></h1>
-            <img src="<?php echo  " ../include/uploads/" . $_SESSION['photo'] ?>" alt="Photo de profil" width="150">
+    <div class="profil">
+<h1>Bonjour <?php echo $_SESSION['nom_utilisateur']; ?></h1>
+        <div class="container-profil">
             
+            <div class="ph_profil">
+                <img src="../include/uploads/<?php echo $_SESSION['photo']; ?>" alt="Photo de profil">
+            </div>
+            <div class="info">
+                <h5>Nom d'utilisateur :  <?php echo $_SESSION['nom_utilisateur']; ?></h5>
+                <h5>Numéro de télephone :  <?php echo $_SESSION['numero_tel']; ?></h5>
+            </div>
 
             
 
 
         </div>
+    </div>
+    
 <!--  -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
