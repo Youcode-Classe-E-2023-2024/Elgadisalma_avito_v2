@@ -1,10 +1,11 @@
 <?php
 require_once 'config.php';
+session_start();
 
 $nom_utilisateur = $_POST['userName'];
 $password = $_POST['password'];
 
-$sql_check_user = "SELECT id, nom_utilisateur, role, password FROM utilisateur WHERE nom_utilisateur = '$nom_utilisateur' ";
+$sql_check_user = "SELECT id, nom_utilisateur, role, password , photo FROM utilisateur WHERE nom_utilisateur = '$nom_utilisateur' ";
 $result_check_user = $link->query($sql_check_user);
 
 if (!$result_check_user) { 
@@ -16,17 +17,21 @@ if ($result_check_user->num_rows > 0) {
 
     // Vérifier le mot de passe haché
     if (password_verify($password, $user['password'])) {
-        session_start();
         $_SESSION['id'] = $user['id'];
         $_SESSION['nom_utilisateur'] = $user['nom_utilisateur'];
         $_SESSION['role'] = $user['role'];
+        $_SESSION['photo'] = $user['photo'];
+
+        var_dump($user);
 
         if ($user['role'] == 'admin') {
             header("Location: ../../ADMIN/pages/indexA.php");
         } else {
             header("Location: ../pages/index.php");
+
+            exit();
         }
-        exit();
+        
     } else {
         header("Location: ../pages/connexion.php?STATUS=probleme de connexion");
         exit();
