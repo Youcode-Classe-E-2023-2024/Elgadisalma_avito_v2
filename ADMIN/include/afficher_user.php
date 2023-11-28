@@ -1,10 +1,12 @@
 <?php
-function get_user() {
     require_once 'config.php';
-        $utilisateur = [];
-    
-    
-        $sql = "SELECT * FROM utilisateur ;";
+
+        function get_user($link, $role) {
+            
+            $utilisateur = [];
+            $sql = "SELECT * FROM utilisateur WHERE role='$role';";
+
+            $result = $link->query($sql);
         $result = $link->query($sql);
         if(mysqli_num_rows($result) > 0){
             while ($row = $result->fetch_assoc()) {
