@@ -26,9 +26,13 @@ session_start();
                 <img src="../include/uploads/<?php echo $_SESSION['photo']; ?>" alt="Photo de profil">
             </div>
             <div class="info">
-                <h5>Nom d'utilisateur :  <?php echo $_SESSION['nom_utilisateur']; ?></h5>
-                <h5>Numéro de téléphone :  <?php echo $_SESSION['numero_tel']; ?></h5>
-                <a href="modi_info.php">
+                <div class="e">
+                    <h5>Nom d'utilisateur :  <?php echo $_SESSION['nom_utilisateur']; ?></h5>
+                    <h5>Numéro de téléphone :  <?php echo $_SESSION['numero_tel']; ?></h5>
+                </div>
+                
+                <div class="ee">
+                   <a href="modi_info.php">
                     <button class="btn btn-warning btn-sm">
                         <i class="fas fa-edit"></i> Modifier mon compte   
                     </button>
@@ -38,7 +42,9 @@ session_start();
                     <button type="submit" class="btn btn-danger btn-sm">
                         <i class="fas fa-trash"></i> Supprimer mon compte
                     </button>
-                </form>
+                </form> 
+                </div>
+                
                         
             </div>
         </div>
