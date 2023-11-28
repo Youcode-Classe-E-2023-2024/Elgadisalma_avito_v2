@@ -25,6 +25,7 @@ session_start();
     <table class="table mt-3">
         <thead>
             <tr>
+                <th>Photo de profil</th>
                 <th>Nom d'utilisateur</th>
                 <th>Numero de telephone</th>
                 <th>Actions</th>
@@ -33,13 +34,14 @@ session_start();
         
         <tbody id="taskTableBody">
         <?php
-            include_once '../../ADMIN/include/afficher_user.php';
-            $utilisateurs = get_user();
+            include_once '../include/afficher_user.php';
+            $utilisateurs = get_user($link, 'client');
             foreach ($utilisateurs as $utilisateur) {
         ?>
             <tr>
-                <td><?php echo $utilisateur['nom_utilisateur'] ;?></td>
-                <td><?php echo $utilisateur['numero_tel'] ;?> </td>
+                <td><img src="../../CLIENT/include/uploads/<?php echo $utilisateur['photo']; ?>" alt="Photo de profil" width="100px"></td>
+                <td><?php echo $utilisateur['nom_utilisateur']; ?></td>
+                <td><?php echo $utilisateur['numero_tel']; ?> </td>
                 <td><form action="../include/delete_user.php" method="get" style="display: inline;">
                     <input type="hidden" name="id" value="<?php echo $utilisateur['id']; ?>">
                     <button type="submit" class="btn btn-danger btn-sm">
