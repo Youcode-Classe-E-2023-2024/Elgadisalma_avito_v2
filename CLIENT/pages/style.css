@@ -71,10 +71,21 @@
     width: 40rem;
     height: 20rem;
     border-radius: 20px;
-    text-align: center;
+    /* text-align: center; */
     display: flex;
     flex-direction: column;
     justify-content: center;
+    
     gap: 30px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.7); 
+}
+.ee{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.e{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
